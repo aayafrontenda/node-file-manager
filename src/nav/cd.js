@@ -1,5 +1,5 @@
 import path from "path";
-export default function (dirPath, username) {
+const cd = async (dirPath, username) => {
   try {
     const absPath = path.resolve(dirPath);
 
@@ -11,4 +11,6 @@ export default function (dirPath, username) {
   } catch (error) {
     process.stderr.write(`Operation failed\n`);
   }
-}
+};
+
+export default cd;

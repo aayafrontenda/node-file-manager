@@ -1,7 +1,7 @@
 import fs from "fs";
 import { sep } from "path";
 
-export default function up(username) {
+const up = async (username) => {
   try {
     const path = process.cwd();
     const dirs = path.split(sep);
@@ -13,4 +13,6 @@ export default function up(username) {
   } catch (error) {
     process.stderr.write(`Operation failed\n`);
   }
-}
+};
+
+export default up;
